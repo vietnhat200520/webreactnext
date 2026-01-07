@@ -1,0 +1,82 @@
+/* Layout chính của Card */
+.course-card {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  flex: 1 1 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+/* Phần hình ảnh */
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.course-img-element {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Phần thông tin nội dung */
+.card-info {
+  padding: 16px;
+  background-color: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Title: Giới hạn 2 dòng */
+.card-title {
+  margin-bottom: 8px !important;
+  font-weight: bold !important;
+  line-height: 1.4 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+}
+
+/* Description: Giới hạn 3 dòng */
+.card-description {
+  margin-bottom: 8px !important;
+  color: #666;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+}
+
+/* Phần chân trang */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.footer-text {
+  font-weight: bold !important;
+}
+
+.footer-text.price {
+  color: #e31e24;
+}

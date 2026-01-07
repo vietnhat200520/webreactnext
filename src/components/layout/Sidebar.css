@@ -1,0 +1,57 @@
+.sidebar {
+  width: 100%;
+}
+
+.sidebar .sidebar-button {
+  background: #d2d6da;
+  color: #111;
+  font-weight: bold;
+  padding: 8px;
+  justify-content: flex-start;
+  text-transform: none;
+  width: 100%;
+}
+
+.sidebar .sidebar-button:hover {
+  background: #ebeff3;
+}
+
+.sidebar .sidebar-list {
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+}
+
+.sidebar .submenu {
+  padding-left: 12px;
+  background: #fafafa;
+}
+
+/* Định nghĩa trạng thái Active */
+.sidebar .list-item-active {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Xử lý Icon xoay bằng CSS thay vì SX */
+.sidebar .arrow-icon {
+  min-width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar .arrow-icon svg {
+  transition: transform 0.3s;
+}
+
+.sidebar .arrow-icon.open svg {
+  transform: rotate(180deg);
+}
+
+/* Kiểu chữ cho Item */
+.sidebar .item-text-primary {
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+
+.sidebar .sub-item-text-primary {
+  font-size: 14px !important;
+}

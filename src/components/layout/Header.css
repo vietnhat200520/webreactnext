@@ -1,0 +1,65 @@
+/* Custom AppBar */
+.MuiAppBar-root.custom-appbar {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  min-height: 0;
+}
+
+/* Container & Toolbar */
+.header-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.MuiToolbar-root.header-toolbar {
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+/* Nav Links */
+.MuiLink-root.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: rgba(0,0,0,0.87);
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.MuiLink-root.nav-link:hover {
+  color: #e31e24;
+}
+
+.MuiIconButton-root.header-cart {
+  margin-left: 20px;
+  color: #f44336;
+}
+
+.MuiIconButton-root.menu-icon-btn {
+  color: black;
+}
+
+.MuiBox-root.mobile-menu-container {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+/* Tinh chỉnh Mobile */
+.mobile-menu-container .nav-link {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.mobile-menu-container .header-cart {
+  margin-left: -8px;
+}

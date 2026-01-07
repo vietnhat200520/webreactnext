@@ -1,0 +1,30 @@
+[
+  {
+    "id": "neu",
+    "school": "ĐẠI HỌC KINH TẾ QUỐC DÂN",
+    "href": "/schools",
+    "branch": ["Kế toán", "Kinh tế vi mô", "Xác suất thống kê", "Nguyên lý kế toán"],
+    "image": "https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fbanner%2Fneu.jpg&w=1920&q=75"
+  },
+  {
+    "id": "xaydung",
+    "school": "ĐẠI HỌC XÂY DỰNG",
+    "href": "/khoa-hoc/huce",
+    "branch": ["Cơ học kết cấu", "Sức bền vật liệu"],
+    "image": "https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fbanner%2FhuCE.jpg&w=1920&q=75"
+  },
+  {
+    "id": "ktphcm",
+    "school": "ĐẠI HỌC KINH TẾ THÀNH PHỐ HCM",
+    "href": "/khoa-hoc/ueh",
+    "branch": ["Marketing", "Quản trị kinh doanh"],
+    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "fpt",
+    "school": "ĐẠI HỌC FPT",
+    "href": "/khoa-hoc/fpt",
+    "branch": ["Khoa học máy tính", "Truyền thông đa phương tiện"],
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=500&auto=format&fit=crop"
+  }
+]

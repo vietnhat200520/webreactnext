@@ -1,0 +1,25 @@
+/* Sử dụng selector cụ thể của MUI để đảm bảo style được áp dụng */
+.MuiButton-root.auth-button {
+  margin: 0 7px;
+  border: 1px solid #0c1727;
+  color: #0a0b0d;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  min-width: auto; /* MUI mặc định có min-width lớn, ta reset lại */
+}
+
+.MuiButton-root.auth-button:hover {
+  color: #fff !important;
+  background-color: #1c3967 !important;
+  border-color: #1c3967;
+}
+
+/* Hiệu ứng scale khi click */
+.MuiButton-root.auth-button.clicked {
+  transform: scale(0.95);
+}

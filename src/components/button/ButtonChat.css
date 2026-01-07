@@ -1,0 +1,43 @@
+/* Sử dụng độ ưu tiên cao để ghi đè mặc định của MUI */
+.MuiButton-root.button-chat {
+    position: fixed !important;
+    bottom: 20px;
+    right: 40px;
+    z-index: 9999;
+    background-color: #dd1515;
+    color: #ffffff;
+    border-radius: 30px !important;
+    text-transform: none !important;
+    padding: 10px 24px !important;
+    font-weight: bold !important;
+    display: flex !important;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.MuiButton-root.button-chat:hover {
+    background-color: #b31212 !important;
+    transform: translateY(-2px);
+}
+
+/* Responsive: Khi màn hình nhỏ hơn 460px */
+@media (max-width: 460px) {
+    .MuiButton-root.button-chat {
+        right: 20px;
+        bottom: 20px;
+        padding: 10px !important;
+        min-width: 0 !important;
+        border-radius: 50% !important;
+    }
+
+    /* Ẩn phần chữ */
+    .button-chat .chat-text {
+        display: none;
+    }
+
+    /* Loại bỏ khoảng cách icon khi không còn chữ */
+    .button-chat .MuiButton-startIcon {
+        margin: 0 !important;
+    }
+}

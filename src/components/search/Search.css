@@ -1,0 +1,44 @@
+.search-field {
+  min-width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+@media (min-width: 493px) {
+  .search-field {
+    min-width: 280px;
+  }
+}
+
+@media (min-width: 780px) {
+  .search-field {
+    min-width: 320px;
+  }
+}
+
+/* Tùy chỉnh chiều cao và bo góc của Input */
+.search-field .MuiOutlinedInput-root {
+  height: 42px;
+  border-radius: 10px;
+}
+
+.search-field .MuiOutlinedInput-root fieldset {
+  border-color: #d7dce3;
+}
+
+.search-field .MuiOutlinedInput-root:hover fieldset {
+  border-color: #c4c9d1;
+}
+
+.search-field .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #9aa0a6;
+  border-width: 1px; /* Giữ border mảnh như thiết kế */
+  box-shadow: 0 0 0 2px rgba(154, 160, 166, 0.2);
+}
+
+.search-field input {
+  font-size: 15px;
+  padding: 10px 12px;
+}
