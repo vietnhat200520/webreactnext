@@ -15,7 +15,7 @@ interface CourseListProps {
 
 const CARDS_PER_PAGE = 9;
 
-const CourseList: React.FC<CourseListProps> = ({ courses }) => {
+const CardListcourse: React.FC<CourseListProps> = ({ courses }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   // Tính toán toán học cho phân trang
@@ -66,4 +66,4 @@ const CourseList: React.FC<CourseListProps> = ({ courses }) => {
   );
 };
 
-export default CourseList;
+export default CardListcourse;

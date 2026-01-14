@@ -2,7 +2,7 @@
   {
     "id": "neu",
     "school": "ĐẠI HỌC KINH TẾ QUỐC DÂN",
-    "href": "/schools",
+    "href": "/khoa-hoc/neu",
     "branch": ["Kế toán", "Kinh tế vi mô", "Xác suất thống kê", "Nguyên lý kế toán"],
     "image": "https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fbanner%2Fneu.jpg&w=1920&q=75"
   },
@@ -26,5 +26,75 @@
     "href": "/khoa-hoc/fpt",
     "branch": ["Khoa học máy tính", "Truyền thông đa phương tiện"],
     "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "bachkhoahanoi",
+    "school": "ĐẠI HỌC BÁCH KHOA HÀ NỘI",
+    "href": "/khoa-hoc/hust",
+    "branch": ["Giải tích", "Vật lý đại cương", "Đại số tuyến tính"],
+    "image": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "nganhang",
+    "school": "HỌC VIỆN NGÂN HÀNG",
+    "href": "/khoa-hoc/bav",
+    "branch": ["Tài chính doanh nghiệp", "Tiền tệ ngân hàng", "Kế toán ngân hàng"],
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "ngoaithuong",
+    "school": "ĐẠI HỌC NGOẠI THƯƠNG",
+    "href": "/khoa-hoc/ftu",
+    "branch": ["Kinh tế quốc tế", "Kinh tế đối ngoại", "Quản trị kinh doanh"],
+    "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "tmu",
+    "school": "ĐẠI HỌC THƯƠNG MẠI",
+    "href": "/khoa-hoc/tmu",
+    "branch": ["Thương mại điện tử", "Logistics", "Marketing thương mại"],
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "ptit",
+    "school": "HỌC VIỆN BƯU CHÍNH VIỄN THÔNG",
+    "href": "/khoa-hoc/ptit",
+    "branch": ["Mạng máy tính", "Lập trình hướng đối tượng", "Cấu trúc dữ liệu"],
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "uel",
+    "school": "ĐẠI HỌC KINH TẾ - LUẬT",
+    "href": "/khoa-hoc/uel",
+    "branch": ["Luật dân sự", "Luật kinh tế", "Luật quốc tế"],
+    "image": "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "vnu",
+    "school": "ĐẠI HỌC QUỐC GIA HÀ NỘI",
+    "href": "/khoa-hoc/vnu",
+    "branch": ["Triết học", "Tư tưởng Hồ Chí Minh", "Pháp luật đại cương"],
+    "image": "https://images.unsplash.com/photo-1498243639359-f75cb752ee47?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "hanoi_sp",
+    "school": "ĐẠI HỌC SƯ PHẠM HÀ NỘI",
+    "href": "/khoa-hoc/hnue",
+    "branch": ["Tâm lý học", "Giáo dục học", "Tiếng Anh chuyên ngành"],
+    "image": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "tdtu",
+    "school": "ĐẠI HỌC TÔN ĐỨC THẮNG",
+    "href": "/khoa-hoc/tdtu",
+    "branch": ["Kỹ thuật phần mềm", "Khoa học máy tính", "Thiết kế đồ họa"],
+    "image": "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?q=80&w=500&auto=format&fit=crop"
+  },
+  {
+    "id": "ufm",
+    "school": "ĐẠI HỌC TÀI CHÍNH - MARKETING",
+    "href": "/khoa-hoc/ufm",
+    "branch": ["Thuế", "Thẩm định giá", "Marketing căn bản"],
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500&auto=format&fit=crop"
   }
 ]

@@ -1,30 +1,241 @@
 [
   {
-    "id": "neu",
-    "school": "ĐẠI HỌC KINH TẾ QUỐC DÂN",
-    "href": "/schools",
-    "branch": ["Kế toán", "Kinh tế vi mô", "Xác suất thống kê", "Nguyên lý kế toán"],
-    "image": "https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fbanner%2Fneu.jpg&w=1920&q=75"
+    "id": 1,
+    "slug": "co-hoc-co-so-2-1",
+    "title": "CƠ HỌC CƠ SỞ 2",
+    "description": "Khóa học được biên soạn với nhiều đề thi cập nhật nhất và các video hướng dẫn chi tiết.",
+    "image": "https://onthisinhvien.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fonthisinhvien.appspot.com%2Fimages%2F588079748-1656554535424-bansaocuacoverkhoahochuce9.jpg&w=1920&q=75",
+    "rating": 353,
+    "price": "48,000 VNĐ",
+    "color": "#3b82f6",
+    "school": "xaydung",
+    "branch": "Cơ học kết cấu",
+    "sections": [
+      {
+        "sectionId": "s1",
+        "title": "KINH NGHIỆM TRƯỚC KHI HỌC",
+        "description": "Hướng dẫn sử dụng khóa học và review về đề thi môn Cơ học cơ sở 2",
+        "displayType": "accordion",
+        "lessons": [
+          { "id": "l1", "order": "01", "type": "reading", "title": "HƯỚNG DẪN SỬ DỤNG", "subTitle": "Hướng dẫn sử dụng và kích hoạt khoá học", "progress": "-" },
+          { "id": "l2", "order": "02", "type": "reading", "title": "MỤC LỤC VÀ REVIEW ĐỀ THI", "subTitle": "Mục lục khoá học và thông tin tổng quan về đề thi", "progress": "-" }
+        ]
+      },
+      {
+        "sectionId": "s2",
+        "title": "MOMEN QUÁN TÍNH",
+        "description": "Cách tính momen quán tính của vật rắn",
+        "displayType": "accordion",
+        "lessons": [
+          { "id": "l3", "order": "01", "type": "reading", "title": "LÝ THUYẾT", "subTitle": "Tóm tắt lý thuyết trọng tâm", "progress": "-" },
+          { "id": "l4", "order": "02", "type": "reading", "title": "BÀI TẬP", "subTitle": "Một số bài tập vận dụng có hướng dẫn giải chi tiết", "progress": "-" }
+        ]
+      },
+      {
+        "sectionId": "s3",
+        "title": "ĐỊNH LÝ ĐỘNG NĂNG",
+        "description": "Tính vận tốc và gia tốc",
+        "displayType": "accordion",
+        "lessons": [
+          { "id": "l5", "order": "01", "type": "video", "title": "LÝ THUYẾT ĐỊNH LÝ ĐỘNG NĂNG", "subTitle": "Video bài giảng kiến thức trọng tâm về Định lý động năng", "progress": "-" },
+          { "id": "l6", "order": "02", "type": "video", "title": "BÀI TẬP ĐỊNH LÝ ĐỘNG NĂNG", "subTitle": "Video hướng dẫn giải các dạng bài tập thường xuất hiện trong đề thi", "progress": "-" }
+        ]
+      },
+      {
+        "sectionId": "s4",
+        "title": "NGUYÊN LÝ CÔNG ẢO",
+        "description": "Tính phản lực bằng nguyên lý công ảo",
+        "displayType": "accordion",
+        "lessons": [
+          { "id": "l7", "order": "01", "type": "video", "title": "LÝ THUYẾT NGUYÊN LÝ CÔNG ẢO", "subTitle": "Video bài giảng lý thuyết trọng tâm Nguyên lý công ảo", "progress": "-" },
+          { "id": "l8", "order": "02", "type": "video", "title": "BÀI TẬP NGUYÊN LÝ CÔNG ẢO", "subTitle": "Video hướng dẫn giải các bài tập thường xuất hiện trong đề thi", "progress": "-" }
+        ]
+      },
+      {
+        "sectionId": "s5",
+        "title": "LÝ THUYẾT NGUYÊN LÝ D'ALEMBERT",
+        "description": "Công thức vận dụng tính phản lực trục và lực căng dây",
+        "displayType": "accordion",
+        "lessons": [
+          { "id": "l9", "order": "01", "type": "video", "title": "BÀI TẬP NGUYÊN LÝ D'ALEMBERT", "subTitle": "Bài tập tính phản lực trục và lực căng dây", "progress": "-" }
+        ]
+      },
+      {
+        "sectionId": "standalone-1",
+        "title": "BÀI TẬP ĐỊNH LÝ ĐỘNG NĂNG KẾT HỢP D'ALAMBER",
+        "subTitle": "Luyện tập 9 bài tập (Câu 2 trong đề thi)",
+        "displayType": "standalone",
+        "type": "reading",
+        "progress": "-",
+        "lessons": []
+      },
+      {
+        "sectionId": "standalone-2",
+        "title": "TỌA ĐỘ SUY RỘNG, PHƯƠNG TRÌNH LAGRANGE II",
+        "subTitle": "Bài tập tạo độ suy rộng",
+        "displayType": "standalone",
+        "type": "video",
+        "progress": "-",
+        "lessons": []
+      },
+      {
+        "sectionId": "standalone-3",
+        "title": "CÁC LÝ THUYẾT TRỌNG TÂM VÀ BÀI TẬP VẬN DỤNG",
+        "subTitle": "Tổng hợp kiến thức",
+        "displayType": "standalone",
+        "type": "reading",
+        "progress": "-",
+        "lessons": []
+      },
+      {
+        "sectionId": "s6",
+        "title": "TỔNG HỢP CÁC BÀI KIỂM TRA",
+        "description": "5 Bài",
+        "displayType": "accordion",
+        "lessons": [
+          { "id": "t1", "order": "01", "type": "reading", "title": "BÀI KIỂM TRA SỐ 1", "subTitle": "Đề và lời giải chi tiết", "progress": "-" },
+          { "id": "t2", "order": "02", "type": "reading", "title": "BÀI KIỂM TRA SỐ 2", "subTitle": "Gồm đề và lời giải chi tiết", "progress": "-" },
+          { "id": "t3", "order": "03", "type": "reading", "title": "BÀI KIỂM TRA SỐ 3", "subTitle": "Gồm đề và lời giải chi tiết", "progress": "-" }
+        ]
+      }
+    ]
   },
   {
-    "id": "xaydung",
-    "school": "ĐẠI HỌC XÂY DỰNG",
-    "href": "/khoa-hoc/huce",
-    "branch": ["Cơ học kết cấu", "Sức bền vật liệu"],
-    "image": "https://onthisinhvien.com/_next/image?url=%2Fimages%2Ficon%2Fotsv%2Fbanner%2FhuCE.jpg&w=1920&q=75"
+    "id": 2,
+    "slug": "toan-danh-cho-kinh-te-2",
+    "title": "TOÁN DÀNH CHO KINH TẾ",
+    "description": "Cam kết chất lượng học, học theo logic, dễ hiểu.",
+    "image": "https://onthisinhvien.com/...",
+    "rating": 342,
+    "price": "38,000 VNĐ",
+    "color": "#10b981",
+    "school": "neu",
+    "branch": "Kinh tế vi mô",
+    "sections": []
   },
   {
-    "id": "ktphcm",
-    "school": "ĐẠI HỌC KINH TẾ THÀNH PHỐ HCM",
-    "href": "/khoa-hoc/ueh",
-    "branch": ["Marketing", "Quản trị kinh doanh"],
-    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=500&auto=format&fit=crop"
+    "id": 3,
+    "slug": "ke-toan-du-an-dau-tu-3",
+    "title": "KẾ TOÁN DỰ ÁN ĐẦU TƯ",
+    "description": "Khóa học dành cho sinh viên ôn thi từ lý thuyết đến bài tập.",
+    "image": "https://onthisinhvien.com/...",
+    "rating": 113,
+    "price": "40,000 VNĐ",
+    "color": "#f59e0b",
+    "school": "neu",
+    "branch": "Kế toán",
+    "sections": []
   },
   {
-    "id": "fpt",
-    "school": "ĐẠI HỌC FPT",
-    "href": "/khoa-hoc/fpt",
-    "branch": ["Khoa học máy tính", "Truyền thông đa phương tiện"],
-    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=500&auto=format&fit=crop"
-  }
+    "id": 4,
+    "slug": "chu-nghia-xa-hoi-khoa-hoc-4",
+    "title": "CHỦ NGHĨA XÃ HỘI KHOA HỌC",
+    "description": "Khóa học lý luận dành cho sinh viên đại học.",
+    "image": "",
+    "badge": "HL",
+    "lecturer": "Onthisinhvien Team",
+    "rating": 113,
+    "price": "40,000 VNĐ",
+    "color": "#ec4899",
+    "school": "neu",
+    "branch": "Nguyên lý kế toán",
+    "sections": []
+  },
+  {
+    "id": 5,
+    "slug": "ke-toan-cong-5",
+    "title": "KẾ TOÁN CÔNG",
+    "description": "Khóa học dành cho sinh viên ôn thi từ lý thuyết đến bài tập.",
+    "image": "https://onthisinhvien.com/...",
+    "rating": 113,
+    "price": "40,000 VNĐ",
+    "color": "#ef4444",
+    "school": "nganhang",
+    "branch": "Kế toán",
+    "sections": []
+  },
+  {
+    "id": 6,
+    "slug": "microeconomics-6",
+    "title": "MICROECONOMICS",
+    "description": "Khóa học dành cho sinh viên ôn thi từ lý thuyết đến bài tập.",
+    "image": "",
+    "badge": "HL",
+    "lecturer": "Onthisinhvien Team",
+    "rating": 113,
+    "price": "40,000 VNĐ",
+    "color": "#8b5cf6",
+    "school": "neu",
+    "branch": "Kinh tế vi mô",
+    "sections": []
+  },
+  {
+    "id": 7,
+    "slug": "kinh-te-vi-mo-2-7",
+    "title": "KINH TẾ VI MÔ 2",
+    "description": "Bộ đề bám sát chương trình, giải thích chi tiết từng dạng bài.",
+    "image": "https://images.unsplash.com/...",
+    "rating": 257,
+    "price": "42,000 VNĐ",
+    "color": "#06b6d4",
+    "school": "neu",
+    "branch": "Kinh tế vi mô",
+    "sections": []
+  },
+  {
+    "id": 8,
+    "slug": "quan-tri-du-an-8",
+    "title": "QUẢN TRỊ DỰ ÁN",
+    "description": "Ôn tập trọng tâm, kèm checklist và file mẫu báo cáo.",
+    "image": "https://images.unsplash.com/...",
+    "rating": 198,
+    "price": "45,000 VNĐ",
+    "color": "#22c55e",
+    "school": "ktphcm",
+    "branch": "Quản trị kinh doanh",
+    "sections": []
+  },
+  {
+    "id": 9,
+    "slug": "cau-truc-du-lieu-9",
+    "title": "CẤU TRÚC DỮ LIỆU",
+    "description": "Lộ trình luyện tập từ cơ bản tới nâng cao.",
+    "image": "https://images.unsplash.com/...",
+    "rating": 305,
+    "price": "50,000 VNĐ",
+    "color": "#0ea5e9",
+    "school": "bachkhoa",
+    "branch": "Công nghệ thông tin",
+    "sections": []
+  },
+  {
+    "id": 10,
+    "slug": "suc-ben-vat-lieu-1-10",
+    "title": "SỨC BỀN VẬT LIỆU 1",
+    "description": "Ôn tập lý thuyết và bài tập sức bền vật liệu cho sinh viên xây dựng.",
+    "image": "",
+    "rating": 180,
+    "price": "45,000 VNĐ",
+    "color": "#f97316",
+    "school": "xaydung",
+    "branch": "Sức bền vật liệu",
+    "sections": []
+  },
+  { "id": 11, "slug": "co-hoc-ket-cau-2-11", "title": "CƠ HỌC KẾT CẤU 2", "description": "...", "image": "", "rating": 162, "price": "50,000 VNĐ", "color": "#84cc16", "school": "xaydung", "branch": "Cơ học kết cấu", "sections": [] },
+  { "id": 12, "slug": "xac-suat-thong-ke-ung-dung-12", "title": "XÁC SUẤT THỐNG KÊ ỨNG DỤNG", "description": "...", "image": "", "rating": 295, "price": "42,000 VNĐ", "color": "#14b8a6", "school": "neu", "branch": "Xác suất thống kê", "sections": [] },
+  { "id": 13, "slug": "nguyen-ly-ke-toan-2-13", "title": "NGUYÊN LÝ KẾ TOÁN 2", "description": "...", "image": "", "rating": 221, "price": "40,000 VNĐ", "color": "#6366f1", "school": "neu", "branch": "Nguyên lý kế toán", "sections": [] },
+  { "id": 14, "slug": "marketing-can-ban-14", "title": "MARKETING CĂN BẢN", "description": "...", "image": "", "rating": 198, "price": "39,000 VNĐ", "color": "#ec4899", "school": "ktphcm", "branch": "Marketing", "sections": [] },
+  { "id": 15, "slug": "quan-tri-marketing-15", "title": "QUẢN TRỊ MARKETING", "description": "...", "image": "", "rating": 176, "price": "44,000 VNĐ", "color": "#0ea5e9", "school": "thuongmai", "branch": "Quản trị marketing", "sections": [] },
+  { "id": 16, "slug": "thuong-mai-dien-tu-can-ban-16", "title": "THƯƠNG MẠI ĐIỆN TỬ CĂN BẢN", "description": "...", "image": "", "rating": 203, "price": "46,000 VNĐ", "color": "#22c55e", "school": "thuongmai", "branch": "Thương mại điện tử", "sections": [] },
+  { "id": 17, "slug": "luat-kinh-te-dai-cuong-17", "title": "LUẬT KINH TẾ ĐẠI CƯƠNG", "description": "...", "image": "", "rating": 141, "price": "38,000 VNĐ", "color": "#f43f5e", "school": "kinhteluat", "branch": "Luật kinh tế", "sections": [] },
+  { "id": 18, "slug": "luat-dan-su-1-18", "title": "LUẬT DÂN SỰ 1", "description": "...", "image": "", "rating": 128, "price": "37,000 VNĐ", "color": "#a855f7", "school": "kinhteluat", "branch": "Luật dân sự", "sections": [] },
+  { "id": 19, "slug": "tai-chinh-ngan-hang-co-ban-19", "title": "TÀI CHÍNH NGÂN HÀNG CƠ BẢN", "description": "...", "image": "", "rating": 214, "price": "43,000 VNĐ", "color": "#06b6d4", "school": "nganhang", "branch": "Tài chính ngân hàng", "sections": [] },
+  { "id": 20, "slug": "an-toan-thong-tin-20", "title": "AN TOÀN THÔNG TIN", "description": "...", "image": "", "rating": 267, "price": "55,000 VNĐ", "color": "#0f172a", "school": "bcvthong", "branch": "An toàn thông tin", "sections": [] },
+  { "id": 21, "slug": "ky-thuat-phan-mem-21", "title": "KỸ THUẬT PHẦM MỀM", "description": "...", "image": "", "rating": 312, "price": "52,000 VNĐ", "color": "#16a34a", "school": "tonducthang", "branch": "Kỹ thuật phần mềm", "sections": [] },
+  { "id": 22, "slug": "toan-danh-cho-kinh-te-22", "title": "TOÁN DÀNH CHO KINH TẾ", "description": "...", "image": "...", "rating": 342, "price": "38,000 VNĐ", "color": "#10b981", "school": "neu", "branch": "Kinh tế vi mô", "sections": [] },
+  { "id": 23, "slug": "toan-danh-cho-kinh-te-23", "title": "TOÁN DÀNH CHO KINH TẾ", "description": "...", "image": "...", "rating": 342, "price": "38,000 VNĐ", "color": "#10b981", "school": "neu", "branch": "Kinh tế vi mô", "sections": [] },
+  { "id": 24, "slug": "toan-danh-cho-kinh-te-24", "title": "TOÁN DÀNH CHO KINH TẾ", "description": "...", "image": "...", "rating": 342, "price": "38,000 VNĐ", "color": "#10b981", "school": "neu", "branch": "Kinh tế vi mô", "sections": [] },
+  { "id": 25, "slug": "toan-danh-cho-kinh-te-25", "title": "TOÁN DÀNH CHO KINH TẾ", "description": "...", "image": "...", "rating": 342, "price": "38,000 VNĐ", "color": "#10b981", "school": "neu", "branch": "Kinh tế vi mô", "sections": [] },
+  { "id": 26, "slug": "toan-danh-cho-kinh-te-26", "title": "TOÁN DÀNH CHO KINH TẾ", "description": "...", "image": "...", "rating": 342, "price": "38,000 VNĐ", "color": "#10b981", "school": "neu", "branch": "Kinh tế vi mô", "sections": [] },
+  { "id": 27, "slug": "toan-danh-cho-kinh-te-27", "title": "TOÁN DÀNH CHO KINH TẾ", "description": "...", "image": "...", "rating": 342, "price": "38,000 VNĐ", "color": "#10b981", "school": "neu", "branch": "Kinh tế vi mô", "sections": [] }
 ]

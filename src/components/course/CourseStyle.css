@@ -1,0 +1,95 @@
+course-detail-view {
+    padding: 24px 0;
+    background-color: #f8faff;
+    min-height: 100vh;
+}
+
+.course-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Accordion Styling */
+.section-accordion-root {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03) !important;
+    border-radius: 12px !important;
+    border: 1px solid #eef2f6 !important;
+}
+
+.section-accordion-root::before {
+    display: none;
+}
+
+.summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 8px;
+}
+
+/* Standalone Section Styling (Phẳng) */
+.standalone-root {
+    background-color: #fff;
+    border: 1px solid #eef2f6;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Lesson Item & Timeline logic */
+.lesson-item-root {
+    position: relative;
+    padding-left: 64px !important;
+    min-height: 72px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 31px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #d32f2f;
+    z-index: 1;
+}
+
+/* Ẩn nửa dưới đường kẻ ở bài học cuối cùng của Section */
+.is-last-lesson .timeline-line {
+    bottom: 50%;
+}
+
+.order-badge {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background-color: #d32f2f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    z-index: 2;
+    border: 3px solid white;
+}
+
+.lesson-icon-wrapper {
+    min-width: 44px !important;
+    color: #444 !important;
+}
+
+.progress-indicator {
+    font-weight: 700;
+    color: #555;
+    min-width: 20px;
+    text-align: center;
+}

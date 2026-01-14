@@ -8,7 +8,8 @@ import {
 import NextLink from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import RegisterModal from '../auth/RegisterModal';
+import LoginModal from '../auth/LoginModal';
 import HoverMenu from '../dropdown/HoverMenu';
 import AuthButton from '../button/ButtonAuth';
 import './Header.css';
@@ -29,15 +30,15 @@ interface MenuItemFormat {
 const Header: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [courseItems, setCourseItems] = useState<MenuItemFormat[]>([]);
-  
+  const [modalState, setModalState] = useState<'closed' | 'login' | 'register'>('closed');
   const isDesktop = useMediaQuery('(min-width:1000px)');
   const hideLogoText = useMediaQuery('(max-width:650px)');
-
+  const [openRegister, setOpenRegister] = useState(false);
   // Fetch API lấy data từ public/data/schools.json
   useEffect(() => {
     const fetchSchools = async () => {
       try {
-        const response = await fetch('public/data/school.json');
+        const response = await fetch('/data/school.json');
         if (!response.ok) throw new Error('Network response was not ok');
         const data: SchoolData[] = await response.json();
         
@@ -113,8 +114,19 @@ const Header: React.FC = () => {
 
           {/* 3. AUTH */}
           <Box style={{ display: 'flex', gap: '8px' }}>
-            <AuthButton label="ĐĂNG NHẬP" onClick={() => {}} variant="outlined" />
-            <AuthButton label="ĐĂNG KÝ" onClick={() => {}} variant="contained" color="error" />
+            <AuthButton label="ĐĂNG NHẬP" onClick={() => setModalState('login')} variant="outlined" />
+            <AuthButton label="ĐĂNG KÝ" onClick={() =>  setModalState('register')} variant="contained" color="error" />
+             
+<LoginModal 
+    open={modalState === 'login'} 
+    onClose={() => setModalState('closed')}
+    onSwitchToRegister={() => setModalState('register')} 
+/>
+
+<RegisterModal 
+    open={modalState === 'register'} 
+    onClose={() => setModalState('closed')} 
+/>
           </Box>
 
         </Toolbar>

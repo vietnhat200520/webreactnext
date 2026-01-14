@@ -1,54 +1,112 @@
 'use client';
 
-import React from 'react';
-import { Container, Box } from '@mui/material';
+import React, { useState, useEffect } from 'react'; // Đã thêm useState, useEffect
+import { 
+  Container, 
+  Box, 
+  CircularProgress, 
+  Typography 
+} from '@mui/material'; // Đã thêm các component thiếu
+
 import SchoolName from '@/components/common/SchoolName';
 import ButtonAuth from '@/components/button/ButtonAuth';
 import ButtonChat from '@/components/button/ButtonChat';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
-import { useParams } from 'next/navigation'; // Hook lấy params trên URL
+import Banner from '@/components/banner/Banner';
+
+import { useParams } from 'next/navigation';
+
+interface SlideItem {
+  id: number | string;
+  link: string;
+  alt: string;
+}
 
 const SchoolPage = () => {
   const params = useParams();
-  const schoolId = params.id as string; // Lấy 'neu' hoặc 'xaydung' từ URL
+  const schoolId = params.id as string;
+
+  const [banners, setBanners] = useState<SlideItem[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const getBanners = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/data/banner.json');
+        
+        if (!response.ok) {
+          throw new Error('Không thể tải dữ liệu banner');
+        }
+
+        const data = await response.json();
+        setBanners(data);
+      } catch (err: any) {
+        console.error("Lỗi fetch banner:", err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getBanners();
+  }, []);
+
+  // Trạng thái Loading
+  if (loading) {
+    return (
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <CircularProgress color="error" />
+      </Box>
+    );
+  }
+
+  // Trạng thái Lỗi
+  if (error) {
+    return (
+      <Box sx={{ textAlign: 'center', py: 5 }}>
+        <Typography color="error">Đã xảy ra lỗi: {error}</Typography>
+      </Box>
+    );
+  } // <-- Đã thêm dấu đóng ngoặc ở đây
 
   return (
-    <Container maxWidth="lg">
-      <Box sx={{ py: 4 }}>
-        <Header/>
-        {/* Kết hợp component SchoolName vào trang */}
-        <SchoolName schoolId={schoolId} />
+    <>
+      <Header />
+      
+      {/* Banner thường nằm full-width phía dưới Header */}
+      {banners.length > 0 && <Banner slidesData={banners} />}
 
-        <ButtonAuth
-          label="Đăng ký"
-          variant="contained"
-          color="primary"
-          onClick={() => {
-            console.log(`Đăng ký cho trường có ID: ${schoolId}`);
-          }}
-          sx={{ mt: 2 }}
-        />
-        <ButtonAuth
-          label="Đăng nhập"
-          variant="contained"
-          color="primary"
-          onClick={() => {
-            console.log(`Đăng nhập cho trường có ID: ${schoolId}`);
-          }}
-          sx={{ mt: 2 }}
-        />
-        <ButtonChat
-          link="https://chat.example.com"
-          sx={{ mt: 2, ml: 2 }}
-        >
-          Chat với ôn thi sinh viên 
-        </ButtonChat>
-        <Footer />
+      <Container maxWidth="lg">
+        <Box sx={{ py: 4 }}>
+          {/* Kết hợp component SchoolName vào trang */}
+          <SchoolName schoolId={schoolId} />
 
-        {/* Các component khác như danh sách khóa học của trường đó sẽ nằm ở đây */}
-      </Box>
-    </Container>
+          <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
+            <ButtonAuth
+              label="Đăng ký"
+              variant="contained"
+              onClick={() => console.log(`Đăng ký cho trường: ${schoolId}`)}
+            />
+            <ButtonAuth
+              label="Đăng nhập"
+              variant="outlined"
+              onClick={() => console.log(`Đăng nhập cho trường: ${schoolId}`)}
+            />
+          </Box>
+
+          {/* Nội dung khóa học sẽ render ở đây */}
+          
+          <ButtonChat link="https://chat.example.com">
+            Chat với ôn thi sinh viên 
+          </ButtonChat>
+        </Box>
+      </Container>
+
+      <Footer />
+    </>
   );
 };
 

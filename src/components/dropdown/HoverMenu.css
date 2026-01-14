@@ -1,0 +1,79 @@
+/* --- Nút bấm chính --- */
+.MuiButton-root.hovermenu-button {
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 8px 16px;
+  background-color: transparent;
+  transition: color 0.2s ease-in-out;
+}
+
+.MuiButton-root.hovermenu-button:hover {
+  color: #d32f2f;
+  background-color: transparent;
+}
+
+/* --- Khung Menu (Paper) --- */
+.MuiPaper-root.hovermenu-paper {
+  max-width: 300px;
+  max-height: 330px;
+  margin-top: 8px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  overflow-y: auto; /* Dùng auto để hiện scrollbar khi cần */
+}
+
+/* --- Danh sách Menu (List) --- */
+.MuiList-root.hovermenu-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* --- Từng dòng Menu (MenuItem) --- */
+.MuiMenuItem-root.hovermenu-item {
+  padding: 14px 20px;
+  white-space: normal;
+}
+
+/* --- Link bên trong --- */
+.hovermenu-link {
+  color: #162f4e;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  line-height: 1.4;
+}
+
+.hovermenu-link:hover {
+  text-decoration: underline;
+}
+
+/* --- Tùy chỉnh thanh cuộn (Scrollbar) --- */
+.hovermenu-paper::-webkit-scrollbar {
+  width: 14px;
+}
+.hovermenu-paper::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.hovermenu-paper::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+.hovermenu-paper::-webkit-scrollbar-button:single-button {
+  background-color: #f1f1f1;
+  display: block;
+  height: 16px;
+  background-size: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hovermenu-paper::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,20 10,80 90,80' fill='%23999'/></svg>");
+}
+.hovermenu-paper::-webkit-scrollbar-button:vertical:increment {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='10,20 90,20 50,80' fill='%23999'/></svg>");
+}
