@@ -38,5 +38,6 @@ export interface ICourse {
   color: string;
   school: string;
   branch: string;
+  Introduction: string[];
   sections: ISection[];
 }

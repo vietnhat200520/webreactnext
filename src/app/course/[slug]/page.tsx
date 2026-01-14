@@ -1,5 +1,6 @@
 // src/app/course/[slug]/page.tsx
 import CourseDetailView from '@/components/course/CourseDetailView';
+import Header from "@/components/layout/Header";
 
 interface PageProps {
   params: Promise<{
@@ -14,6 +15,7 @@ export default async function CoursePage({ params }: PageProps) {
 
   return (
     <main>
+      <Header />
       {/* Truyền slug đã giải nén vào component */}
       <CourseDetailView courseSlug={slug} />
     </main>

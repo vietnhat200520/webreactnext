@@ -1,51 +1,40 @@
-course-detail-view {
-    padding: 24px 0;
-    background-color: #f8faff;
+/* Chỉnh sửa tổng thể */
+.course-detail-view {
+    padding: 32px 0;
+    background-color: #fcfdfe;
     min-height: 100vh;
 }
 
-.course-content-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* Accordion Styling */
-.section-accordion-root {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03) !important;
-    border-radius: 12px !important;
-    border: 1px solid #eef2f6 !important;
-}
-
-.section-accordion-root::before {
-    display: none;
-}
-
-.summary-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding-right: 8px;
-}
-
-/* Standalone Section Styling (Phẳng) */
+/* Standalone (Bài học độc lập) */
 .standalone-root {
     background-color: #fff;
-    border: 1px solid #eef2f6;
+    border: 1px solid #e0e6ed;
     border-radius: 12px;
-    padding: 16px;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 12px;
 }
 
-/* Lesson Item & Timeline logic */
+.standalone-icon-wrapper {
+    min-width: 40px !important;
+    color: #444 !important;
+}
+
+/* Lesson Item (Bài học trong Section) */
 .lesson-item-root {
     position: relative;
-    padding-left: 64px !important;
+    padding-left: 16px !important; /* Reset padding để căn theo timeline */
     min-height: 72px;
+    border-top: 1px solid #f0f2f5;
+}
+
+/* Icon nằm bên phải số thứ tự (badge) */
+.lesson-icon-wrapper-inner {
+    min-width: 35px !important;
+    margin-left: 45px; /* Đẩy icon sang phải để né badge và timeline */
+    color: #555 !important;
 }
 
 .timeline-line {
@@ -54,23 +43,22 @@ course-detail-view {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #d32f2f;
+    background-color: #f44336;
     z-index: 1;
 }
 
-/* Ẩn nửa dưới đường kẻ ở bài học cuối cùng của Section */
 .is-last-lesson .timeline-line {
     bottom: 50%;
 }
 
 .order-badge {
     position: absolute;
-    left: 18px;
+    left: 17px;
     top: 50%;
     transform: translateY(-50%);
     width: 28px;
     height: 28px;
-    background-color: #d32f2f;
+    background-color: #f44336;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -79,17 +67,62 @@ course-detail-view {
     font-size: 11px;
     font-weight: 800;
     z-index: 2;
-    border: 3px solid white;
+    border: 3px solid #fff;
 }
 
-.lesson-icon-wrapper {
-    min-width: 44px !important;
-    color: #444 !important;
+/* Accordion & Expand logic */
+.accordion-summary-reverse {
+    flex-direction: row-reverse !important;
+}
+
+.accordion-summary-reverse .MuiAccordionSummary-content {
+    margin-left: 8px !important;
+}
+
+.custom-expand-icon {
+    font-size: 18px !important;
+    color: #666 !important;
+    transition: transform 0.3s ease !important;
+}
+
+.Mui-expanded .custom-expand-icon {
+    transform: rotate(90deg) !important;
+}
+
+.section-accordion-root {
+    box-shadow: none !important;
+    border-radius: 12px !important;
+    border: 1px solid #e0e6ed !important;
+    margin-bottom: 12px !important;
+    overflow: hidden;
+}
+
+/* Typography & Progress */
+.section-title-text {
+    font-weight: 800 !important;
+    font-size: 14px !important;
+    color: #1a1a1a;
 }
 
 .progress-indicator {
-    font-weight: 700;
+    font-weight: 800 !important;
     color: #555;
-    min-width: 20px;
-    text-align: center;
+    min-width: 30px;
+    text-align: right;
 }
+
+.launch-icon-style {
+    color: #1976d2;
+    font-size: 18px !important;
+}
+.summary-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+} 

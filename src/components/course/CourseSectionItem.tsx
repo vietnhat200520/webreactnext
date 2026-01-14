@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Box, List, ListItemIcon } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight'; 
 import LaunchIcon from '@mui/icons-material/Launch';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
@@ -12,35 +12,54 @@ interface Props {
 }
 
 const CourseSectionItem: React.FC<Props> = ({ section }) => {
-  // Case 1: Mục hiển thị phẳng (Standalone)
+  // Case 1: Mục độc lập (Không nằm trong section đóng mở)
   if (section.displayType === 'standalone') {
     return (
       <div className="standalone-root">
         <Box display="flex" alignItems="center">
-          <ListItemIcon classes={{ root: "lesson-icon-wrapper" }}>
+          {/* Chỉ hiện icon loại bài học ở đầu, không có icon đóng/mở */}
+          <ListItemIcon classes={{ root: "standalone-icon-wrapper" }}>
             {section.type === 'video' ? <PlayCircleIcon /> : <MenuBookIcon />}
           </ListItemIcon>
-          <Box>
-            <Typography variant="subtitle2" fontWeight={700}>{section.title}</Typography>
-            <Typography variant="caption" color="textSecondary">{section.subTitle}</Typography>
+          <Box ml={1}>
+            <Typography variant="subtitle2" className="section-title-text">
+              {section.title}
+            </Typography>
+            <Typography variant="caption" color="textSecondary" className="section-sub-text">
+              {section.subTitle}
+            </Typography>
           </Box>
         </Box>
-        <Typography className="progress-indicator">{section.progress}</Typography>
+        <Box display="flex" alignItems="center" gap={2}>
+          <Typography className="progress-indicator">{section.progress || '-'}</Typography>
+          <LaunchIcon className="launch-icon-style" />
+        </Box>
       </div>
     );
   }
 
-  // Case 2: Mục hiển thị đóng mở (Accordion)
+  // Case 2: Section có chứa danh sách bài học (Có đóng mở)
   return (
-    <Accordion classes={{ root: "section-accordion-root" }}
-    expanded={true}>
-      <AccordionSummary >
+    <Accordion 
+      classes={{ root: "section-accordion-root" }}
+      defaultExpanded={true}
+    >
+      <AccordionSummary 
+        expandIcon={<KeyboardDoubleArrowRightIcon className="custom-expand-icon" />} 
+        aria-controls={`section-${section.sectionId}-content`}
+        id={`section-${section.sectionId}-header`}
+        className="accordion-summary-reverse"
+      >
         <div className="summary-content">
           <Box>
-            <Typography variant="subtitle2" fontWeight={800}>{section.title}</Typography>
-            <Typography variant="caption" color="textSecondary">{section.description}</Typography>
+            <Typography variant="subtitle2" className="section-title-text">
+              {section.title}
+            </Typography>
+            <Typography variant="caption" color="textSecondary" className="section-sub-text">
+              {section.description}
+            </Typography>
           </Box>
-          <LaunchIcon color="primary" fontSize="small" />
+          <LaunchIcon className="launch-icon-style" />
         </div>
       </AccordionSummary>
       <AccordionDetails style={{ padding: 0 }}>
