@@ -1,102 +1,112 @@
- [
-    {
-      "id": 1,
-      "username": "nhatnguyen",
-      "password": "12345678",
-      "fullName": "Nguyễn Văn Nhất",
-      "email": "nhat.nguyen@gmail.com",
-      "phone": "0901234567",
-      "provider": "local",
-      "createdAt": "2025-01-05T08:30:00Z"
-    },
-    {
-      "id": 2,
-      "username": "tuantran",
-      "password": "tuan@2025",
-      "fullName": "Trần Minh Tuấn",
-      "email": "tuan.tran@gmail.com",
-      "phone": "0912345678",
-      "provider": "local",
-      "createdAt": "2025-01-06T09:15:00Z"
-    },
-    {
-      "id": 3,
-      "username": "linhpham",
-      "password": "linh12345",
-      "fullName": "Phạm Thị Linh",
-      "email": "linh.pham@gmail.com",
-      "phone": "0923456789",
-      "provider": "local",
-      "createdAt": "2025-01-06T10:00:00Z"
-    },
-    {
-      "id": 4,
-      "username": "hoanganh",
-      "password": "hoanganh@123",
-      "fullName": "Nguyễn Hoàng Anh",
-      "email": "hoanganh@gmail.com",
-      "phone": "0934567890",
-      "provider": "local",
-      "createdAt": "2025-01-07T11:20:00Z"
-    },
-    {
-      "id": 5,
-      "username": "thanhle",
-      "password": "thanhle888",
-      "fullName": "Lê Thị Thanh",
-      "email": "thanh.le@gmail.com",
-      "phone": "0945678901",
-      "provider": "local",
-      "createdAt": "2025-01-07T14:45:00Z"
-    },
-    {
-      "id": 6,
-      "username": "ducvo",
-      "password": "ducvo2025",
-      "fullName": "Võ Quốc Đức",
-      "email": "duc.vo@gmail.com",
-      "phone": "0956789012",
-      "provider": "local",
-      "createdAt": "2025-01-08T08:10:00Z"
-    },
-    {
-      "id": 7,
-      "username": "mynguyen",
-      "password": "mynguyen@123",
-      "fullName": "Nguyễn Thị Mỹ",
-      "email": "my.nguyen@gmail.com",
-      "phone": "0967890123",
-      "provider": "local",
-      "createdAt": "2025-01-08T09:40:00Z"
-    },
-    {
-      "id": 8,
-      "username": "datpham",
-      "password": "datpham456",
-      "fullName": "Phạm Tiến Đạt",
-      "email": "dat.pham@gmail.com",
-      "phone": "0978901234",
-      "provider": "local",
-      "createdAt": "2025-01-09T13:05:00Z"
-    },
-    {
-      "id": 9,
-      "username": "hoale",
-      "password": "hoa@le2025",
-      "fullName": "Lê Thị Hoa",
-      "email": "hoa.le@gmail.com",
-      "phone": "0989012345",
-      "provider": "local",
-      "createdAt": "2025-01-09T15:30:00Z"
-    },
-    {
-      "id": 10,
-      "username": "googleuser01",
-      "password": null,
-      "fullName": "Nguyễn Minh Khoa",
-      "email": "khoa.nguyen@gmail.com",
-      "phone": "0990123456",
-      "provider": "google",
-      "createdAt": "2025-01-10T07:50:00Z"
-    }
-  ]
+[
+  {
+    "id": 1,
+    "username": "nhatnguyen",
+    "password": "12345678",
+    "fullName": "Nguyễn Văn Nhất",
+    "email": "nhat.nguyen@gmail.com",
+    "phone": "0901234567",
+    "provider": "local",
+    "createdAt": "2025-01-05T08:30:00Z"
+  },
+  {
+    "id": 2,
+    "username": "tuantran",
+    "password": "tuan@2025",
+    "fullName": "Trần Minh Tuấn",
+    "email": "tuan.tran@gmail.com",
+    "phone": "0912345678",
+    "provider": "local",
+    "createdAt": "2025-01-06T09:15:00Z"
+  },
+  {
+    "id": 3,
+    "username": "linhpham",
+    "password": "linh12345",
+    "fullName": "Phạm Thị Linh",
+    "email": "linh.pham@gmail.com",
+    "phone": "0923456789",
+    "provider": "local",
+    "createdAt": "2025-01-06T10:00:00Z"
+  },
+  {
+    "id": 4,
+    "username": "hoanganh",
+    "password": "hoanganh@123",
+    "fullName": "Nguyễn Hoàng Anh",
+    "email": "hoanganh@gmail.com",
+    "phone": "0934567890",
+    "provider": "local",
+    "createdAt": "2025-01-07T11:20:00Z"
+  },
+  {
+    "id": 5,
+    "username": "thanhle",
+    "password": "thanhle888",
+    "fullName": "Lê Thị Thanh",
+    "email": "thanh.le@gmail.com",
+    "phone": "0945678901",
+    "provider": "local",
+    "createdAt": "2025-01-07T14:45:00Z"
+  },
+  {
+    "id": 6,
+    "username": "ducvo",
+    "password": "ducvo2025",
+    "fullName": "Võ Quốc Đức",
+    "email": "duc.vo@gmail.com",
+    "phone": "0956789012",
+    "provider": "local",
+    "createdAt": "2025-01-08T08:10:00Z"
+  },
+  {
+    "id": 7,
+    "username": "mynguyen",
+    "password": "mynguyen@123",
+    "fullName": "Nguyễn Thị Mỹ",
+    "email": "my.nguyen@gmail.com",
+    "phone": "0967890123",
+    "provider": "local",
+    "createdAt": "2025-01-08T09:40:00Z"
+  },
+  {
+    "id": 8,
+    "username": "datpham",
+    "password": "datpham456",
+    "fullName": "Phạm Tiến Đạt",
+    "email": "dat.pham@gmail.com",
+    "phone": "0978901234",
+    "provider": "local",
+    "createdAt": "2025-01-09T13:05:00Z"
+  },
+  {
+    "id": 9,
+    "username": "hoale",
+    "password": "hoa@le2025",
+    "fullName": "Lê Thị Hoa",
+    "email": "hoa.le@gmail.com",
+    "phone": "0989012345",
+    "provider": "local",
+    "createdAt": "2025-01-09T15:30:00Z"
+  },
+  {
+    "id": 10,
+    "username": "googleuser01",
+    "password": null,
+    "fullName": "Nguyễn Minh Khoa",
+    "email": "khoa.nguyen@gmail.com",
+    "phone": "0990123456",
+    "provider": "google",
+    "createdAt": "2025-01-10T07:50:00Z"
+  },
+  {
+    "username": "nhat",
+    "password": "123456",
+    "fullName": "Nguyễn Sỹ Việt Nhật",
+    "email": "ngu",
+    "phone": "0369808413",
+    "provider": "local",
+    "createdAt": "2026-01-14T06:06:53.611Z",
+    "id": 11
+  }
+]

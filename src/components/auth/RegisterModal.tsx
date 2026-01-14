@@ -15,10 +15,10 @@ import './RegisterModal.css';
 interface RegisterModalProps {
     open: boolean;
     onClose: () => void;
+    onSwitchToLogin: () => void; // Thêm hàm điều hướng này
 }
 
-const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
-    // State quản lý dữ liệu nhập vào
+const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose, onSwitchToLogin }) => {
     const [formData, setFormData] = useState({
         username: '',
         password: '',
@@ -33,13 +33,17 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
     };
 
     const handleRegister = async () => {
+        if (!formData.username || !formData.password || !formData.fullName || !formData.email || !formData.phone) {
+            alert("Vui lòng điền đầy đủ thông tin!");
+            return;
+        }
+
         if (formData.password !== formData.confirmPassword) {
             alert("Mật khẩu xác nhận không khớp!");
             return;
         }
 
         const newUser = {
-            id: Date.now(), // Tạo ID tạm thời
             username: formData.username,
             password: formData.password,
             fullName: formData.fullName,
@@ -49,24 +53,31 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
             createdAt: new Date().toISOString()
         };
 
-        console.log("Dữ liệu chuẩn bị lưu vào user.json:", newUser);
-
-        // Giả lập gọi API route để ghi file user.json (Next.js Server Side)
         try {
             const response = await fetch('/api/register', {
                 method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newUser),
-                headers: { 'Content-Type': 'application/json' }
             });
 
             if (response.ok) {
-                alert("Đăng ký thành công!");
-                onClose();
+                alert("Đăng ký thành công và đã lưu vào hệ thống!");
+                
+                // Reset form
+                setFormData({
+                    username: '', password: '', confirmPassword: '',
+                    fullName: '', email: '', phone: ''
+                });
+
+                // TỰ ĐỘNG CHUYỂN VỀ MÀN HÌNH ĐĂNG NHẬP
+                onSwitchToLogin(); 
+            } else {
+                const errData = await response.json();
+                alert("Lỗi: " + errData.message);
             }
         } catch (error) {
             console.error("Lỗi đăng ký:", error);
-            // Trong môi trường demo, chúng ta vẫn log ra dữ liệu
-            alert("Tính năng ghi file cần API Route. Kiểm tra Console để xem dữ liệu JSON.");
+            alert("Không thể kết nối đến máy chủ!");
         }
     };
 
@@ -88,12 +99,12 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
 
             <DialogContent>
                 <Box className="register-form-container">
-                    {/* Cột 1: Thông tin tài khoản */}
                     <Box>
                         <Typography className="form-column-title">1. Thông tin tài khoản</Typography>
                         <TextField
                             fullWidth
                             name="username"
+                            value={formData.username}
                             placeholder="Tài khoản đăng nhập*"
                             className="register-input-field"
                             margin="normal"
@@ -105,6 +116,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
                         <TextField
                             fullWidth
                             name="password"
+                            value={formData.password}
                             type="password"
                             placeholder="Mật khẩu*"
                             className="register-input-field"
@@ -117,6 +129,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
                         <TextField
                             fullWidth
                             name="confirmPassword"
+                            value={formData.confirmPassword}
                             type="password"
                             placeholder="Xác nhận mật khẩu*"
                             className="register-input-field"
@@ -128,12 +141,12 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
                         />
                     </Box>
 
-                    {/* Cột 2: Thông tin cá nhân */}
                     <Box>
                         <Typography className="form-column-title">2. Thông tin cá nhân</Typography>
                         <TextField
                             fullWidth
                             name="fullName"
+                            value={formData.fullName}
                             placeholder="Họ và tên*"
                             className="register-input-field"
                             margin="normal"
@@ -145,6 +158,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
                         <TextField
                             fullWidth
                             name="email"
+                            value={formData.email}
                             placeholder="Email*"
                             className="register-input-field"
                             margin="normal"
@@ -156,6 +170,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
                         <TextField
                             fullWidth
                             name="phone"
+                            value={formData.phone}
                             placeholder="Số điện thoại*"
                             className="register-input-field"
                             margin="normal"
@@ -191,7 +206,7 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose }) => {
                 </Button>
 
                 <Typography className="login-redirect-text">
-                    Đã có tài khoản? <span className="login-link">Đăng nhập ngay</span>
+                    Đã có tài khoản? <span className="login-link" onClick={onSwitchToLogin}>Đăng nhập ngay</span>
                 </Typography>
             </DialogContent>
         </Dialog>

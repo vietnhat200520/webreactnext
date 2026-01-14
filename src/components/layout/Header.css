@@ -1,8 +1,9 @@
 /* Custom AppBar */
 .MuiAppBar-root.custom-appbar {
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background-color: white !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
   min-height: 0;
+  z-index: 1100;
 }
 
 /* Container & Toolbar */
@@ -26,7 +27,7 @@
   text-transform: uppercase;
   margin-left: 20px;
   margin-right: 20px;
-  color: rgba(0,0,0,0.87);
+  color: rgba(0,0,0,0.87) !important;
   font-weight: 700;
   font-size: 14px;
   display: flex;
@@ -36,11 +37,11 @@
 }
 
 .MuiLink-root.nav-link:hover {
-  color: #e31e24;
+  color: #e31e24 !important;
 }
 
 .MuiIconButton-root.header-cart {
-  margin-left: 20px;
+  margin-left: 10px;
   color: #f44336;
 }
 
@@ -54,12 +55,13 @@
   background-color: #fff;
 }
 
-/* Tinh chỉnh Mobile */
-.mobile-menu-container .nav-link {
-  margin: 10px 0;
+/* Mobile responsive fixes */
+.mobile-menu-inner {
   width: 100%;
 }
 
-.mobile-menu-container .header-cart {
-  margin-left: -8px;
+.mobile-menu-container .nav-link {
+  margin: 10px 0 !important;
+  width: 100%;
+  padding: 8px 0;
 }
