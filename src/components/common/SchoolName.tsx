@@ -13,7 +13,7 @@ interface SchoolNameProps {
 }
 
 const SchoolName: React.FC<SchoolNameProps> = ({ schoolId }) => {
-  // Truy xuất dữ liệu từ Redux Store
+  
   const university = useSelector((state: RootState) => 
     state.category.categoriesData.find((item) => item.id === schoolId)
   );
