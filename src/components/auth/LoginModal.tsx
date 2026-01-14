@@ -48,7 +48,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ open, onClose, onSwitchToRegist
                 
                 alert("Đăng nhập thành công!");
                 onClose();
-                router.push('/'); // Về trang chủ
+                router.push('/'); 
             } else {
                 alert("Tài khoản hoặc mật khẩu không chính xác!");
             }
@@ -61,7 +61,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ open, onClose, onSwitchToRegist
     return (
         <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth classes={{ paper: 'login-modal-paper' }}>
             <IconButton className="close-icon-btn" onClick={onClose}><CloseIcon /></IconButton>
-            <DialogTitle className="login-title-container">
+            <DialogTitle className="login-title-container"  component="div">
                 <Typography variant="h5" fontWeight="700">Đăng nhập</Typography>
             </DialogTitle>
             <DialogContent>
