@@ -1,39 +1,45 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface User {
-    username: string;
-    fullName: string;
-    email: string;
-    avatar?: string;
-}
-
 interface AuthState {
-    isLoggedIn: boolean;
-    user: User | null;
+    isAuthenticated: boolean;
+    user: any | null;
+    expiresAt: number | null; // Thêm dòng này để lưu mốc hết hạn
 }
 
-// Khởi tạo trạng thái từ LocalStorage nếu có
 const initialState: AuthState = {
-    isLoggedIn: typeof window !== 'undefined' ? !!localStorage.getItem('user') : false,
-    user: typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user') || 'null') : null,
+    isAuthenticated: false,
+    user: null,
+    expiresAt: null, // Mặc định là null
 };
 
 const authSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
-        loginSuccess: (state, action: PayloadAction<User>) => {
-            state.isLoggedIn = true;
+        loginSuccess: (state, action: PayloadAction<any>) => {
+            state.isAuthenticated = true;
             state.user = action.payload;
-            localStorage.setItem('user', JSON.stringify(action.payload));
+            // Lưu mốc: Thời gian hiện tại + 60 phút
+            state.expiresAt = Date.now() + 60 * 60 * 1000; 
         },
         logout: (state) => {
-            state.isLoggedIn = false;
+            state.isAuthenticated = false;
             state.user = null;
-            localStorage.removeItem('user');
+            state.expiresAt = null;
+            if (typeof window !== 'undefined') {
+                localStorage.removeItem('user');
+            }
         },
+        
+        checkSession: (state) => {
+            if (state.expiresAt && Date.now() > state.expiresAt) {
+                state.isAuthenticated = false;
+                state.user = null;
+                state.expiresAt = null;
+            }
+        }
     },
 });
 
-export const { loginSuccess, logout } = authSlice.actions;
+export const { loginSuccess, logout, checkSession } = authSlice.actions;
 export default authSlice.reducer;

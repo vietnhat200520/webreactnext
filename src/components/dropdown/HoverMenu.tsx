@@ -3,16 +3,16 @@
 
 import React, { useState, useRef, MouseEvent } from 'react';
 import { Button, Menu, MenuItem, Box, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation'; // Hook điều hướng của Next.js
+import { useRouter } from 'next/navigation'; 
 import './HoverMenu.css';
 
-// Định nghĩa kiểu dữ liệu cho từng item trong menu
+
 interface HoverMenuItem {
   label: string;
   href: string;
 }
 
-// Định nghĩa Props cho component
+
 interface HoverMenuProps {
   items?: HoverMenuItem[];
   buttonLabel?: string;
@@ -24,7 +24,7 @@ const HoverMenu: React.FC<HoverMenuProps> = ({
   buttonLabel = "KHOÁ HỌC", 
   baseHref = '#' 
 }) => {
-  // Xác định kiểu cho anchorEl là HTMLElement hoặc null
+  
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const open = Boolean(anchorEl);
@@ -54,7 +54,7 @@ const HoverMenu: React.FC<HoverMenuProps> = ({
     <Box 
       onMouseEnter={handleMouseEnter} 
       onMouseLeave={handleMouseLeave} 
-      // Dùng inline style thay cho sx cho các layout cơ bản
+      
       style={{ display: 'inline-block', position: 'relative' }} 
     >
       <Button
@@ -74,12 +74,12 @@ const HoverMenu: React.FC<HoverMenuProps> = ({
         disableRestoreFocus
         disableScrollLock
         disableAutoFocusItem
-        // Thay sx={{ pointerEvents: 'none' }} bằng inline style
+      
         style={{ pointerEvents: 'none' }}
         slotProps={{
           paper: { 
             classes: { root: 'hovermenu-paper' },
-            // Thay sx={{ pointerEvents: 'auto' }} bằng inline style
+            
             style: { pointerEvents: 'auto' } 
           },
           list: { 
