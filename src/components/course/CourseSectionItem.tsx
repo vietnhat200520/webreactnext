@@ -60,7 +60,7 @@ const CourseSectionItem: React.FC<Props> = ({ section }) => {
             </Typography>
           </Box>
           <LaunchIcon className="launch-icon-style" />
-        </div>
+        </Box>
       </AccordionSummary>
       <AccordionDetails style={{ padding: 0 }}>
         <List disablePadding>

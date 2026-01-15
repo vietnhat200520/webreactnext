@@ -52,7 +52,7 @@ const CourseDetailView: React.FC<Props> = ({ courseSlug }) => {
 
         <CourseContentList sections={currentCourse.sections} />
       </Container>
-    </div>
+    </Box>
   );
 };
 
