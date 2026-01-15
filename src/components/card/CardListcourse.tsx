@@ -44,15 +44,15 @@ const CardListcourse: React.FC<CourseListProps> = ({ courses }) => {
     <Box className="course-list-container">
       <Box className="course-grid">
         {currentCards.map((course) => (
-          <div key={course.id} className="grid-item">
+          <Box key={course.id} className="grid-item">
             <CourseCard course={course} />
-          </div>
+          </Box>
         ))}
       </Box>
 
-      {/* PHẦN PHÂN TRANG */}
+      
       {totalCourses > CARDS_PER_PAGE && (
-        <div className="pagination-wrapper">
+        <Box className="pagination-wrapper">
           <Pagination
             count={totalPages}
             page={currentPage}
@@ -60,7 +60,7 @@ const CardListcourse: React.FC<CourseListProps> = ({ courses }) => {
             shape="rounded"
             variant="outlined"
           />
-        </div>
+        </Box>
       )}
     </Box>
   );

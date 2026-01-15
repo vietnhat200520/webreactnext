@@ -50,7 +50,7 @@ const CourseSectionItem: React.FC<Props> = ({ section }) => {
         id={`section-${section.sectionId}-header`}
         className="accordion-summary-reverse"
       >
-        <div className="summary-content">
+        <Box className="summary-content">
           <Box>
             <Typography variant="subtitle2" className="section-title-text">
               {section.title}

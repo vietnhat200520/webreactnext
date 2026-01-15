@@ -35,9 +35,9 @@ const Footer: React.FC = () => {
   return (
     <Box component="footer" className="footer-container">
       <Container maxWidth="lg" className="footer-inner">
-        <div className="footer-grid">
+        <Box className="footer-grid">
           {/* Cột 1: Thông tin */}
-          <div className="footer-item col-info">
+          <Box className="footer-item col-info">
             <Typography className="column-title">THÔNG TIN</Typography>
             <Typography className="footer-text">Email: info@onthisinhvien.vn</Typography>
             <Typography className="footer-text">Hotline: 02473 010 929</Typography>
@@ -46,10 +46,10 @@ const Footer: React.FC = () => {
               <LocationOnIcon className="footer-icon" />
               <Typography className="footer-text">Địa chỉ: Số 355 ngõ Quỳnh, Bạch Mai, Hà Nội</Typography>
             </Box>
-          </div>
+          </Box>
 
           {/* Cột 2: Tiện ích */}
-          <div className="footer-item col-util">
+          <Box className="footer-item col-util">
             <Typography className="column-title">TIỆN ÍCH</Typography>
             <List disablePadding>
               {utilities.map((item) => (
@@ -64,10 +64,10 @@ const Footer: React.FC = () => {
                 </ListItem>
               ))}
             </List>
-          </div>
+          </Box>
 
           {/* Cột 3: Chính sách */}
-          <div className="footer-item col-policy">
+          <Box className="footer-item col-policy">
             <Typography className="column-title">CHÍNH SÁCH</Typography>
             <List disablePadding>
               {policies.map((item) => (
@@ -82,10 +82,10 @@ const Footer: React.FC = () => {
                 </ListItem>
               ))}
             </List>
-          </div>
+          </Box>
 
           {/* Cột 4: Liên kết */}
-          <div className="footer-item col-partner">
+          <Box className="footer-item col-partner">
             <Typography className="column-title">LIÊN KẾT</Typography>
             <List disablePadding>
               {partners.map((item) => (
@@ -100,15 +100,15 @@ const Footer: React.FC = () => {
                 </ListItem>
               ))}
             </List>
-          </div>
+          </Box>
 
-          {/* Cột 5: Tải App */}
-          <div className="footer-item col-app">
+         
+          <Box className="footer-item col-app">
             <Typography className="column-title">TẢI APP</Typography>
             <Link href="#" className="footer-link-item">Google Play</Link>
             <Link href="#" className="footer-link-item">App Store</Link>
-          </div>
-        </div>
+          </Box>
+        </Box>
       </Container>
 
       <Box className="footer-bottom">

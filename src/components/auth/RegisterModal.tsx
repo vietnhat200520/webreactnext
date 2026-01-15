@@ -63,13 +63,13 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose, onSwitchTo
             if (response.ok) {
                 alert("Đăng ký thành công và đã lưu vào hệ thống!");
                 
-                // Reset form
+                
                 setFormData({
                     username: '', password: '', confirmPassword: '',
                     fullName: '', email: '', phone: ''
                 });
 
-                // TỰ ĐỘNG CHUYỂN VỀ MÀN HÌNH ĐĂNG NHẬP
+           
                 onSwitchToLogin(); 
             } else {
                 const errData = await response.json();
@@ -191,9 +191,9 @@ const RegisterModal: React.FC<RegisterModalProps> = ({ open, onClose, onSwitchTo
                 </Button>
 
                 <Box className="divider-container">
-                    <div className="divider-line" />
+                    <Box className="divider-line" />
                     <span className="divider-text">HOẶC</span>
-                    <div className="divider-line" />
+                    <Box className="divider-line" />
                 </Box>
 
                 <Button fullWidth className="google-login-btn">

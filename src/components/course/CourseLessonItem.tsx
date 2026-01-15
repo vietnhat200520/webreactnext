@@ -14,11 +14,11 @@ const CourseLessonItem: React.FC<Props> = ({ lesson, isLast }) => {
 
   return (
     <ListItem classes={{ root: itemClasses }}>
-      <div className="timeline-line" />
-      <div className="order-badge">{lesson.order}</div>
+      <Box className="timeline-line" />
+      <Box className="order-badge">{lesson.order}</Box>
 
       <Box display="flex" alignItems="center" width="100%">
-        {/* Icon nằm ngay cạnh khu vực timeline/badge */}
+        
         <ListItemIcon classes={{ root: "lesson-icon-wrapper-inner" }}>
           {lesson.type === 'video' ? (
             <PlayCircleIcon fontSize="small" />

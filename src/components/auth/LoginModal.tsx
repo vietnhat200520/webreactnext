@@ -78,7 +78,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ open, onClose, onSwitchToRegist
                     />
                     <Typography className="forgot-password-link">Quên mật khẩu</Typography>
                     <Button className="login-submit-btn" onClick={handleLogin}>Đăng nhập</Button>
-                    <Box className="divider-container"><div className="divider-line" /><span className="divider-text">HOẶC</span><div className="divider-line" /></Box>
+                    <Box className="divider-container"><Box className="divider-line" /><span className="divider-text">HOẶC</span><div className="divider-line" /></Box>
                     <Button className="google-login-btn">
                         <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="google" style={{ width: 18, marginRight: 10 }} />
                         Đăng nhập với Google

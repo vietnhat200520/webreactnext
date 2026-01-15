@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSectionItem from './CourseSectionItem';
 import { ISection } from '@/types/types';
+import {Box } from '@mui/material';
 
 interface Props {
   sections: ISection[];
@@ -8,11 +9,11 @@ interface Props {
 
 const CourseContentList: React.FC<Props> = ({ sections }) => {
   return (
-    <div className="course-content-list">
+    <Box className="course-content-list">
       {sections.map((section) => (
         <CourseSectionItem key={section.sectionId} section={section} />
       ))}
-    </div>
+    </Box>
   );
 };
 
