@@ -10,7 +10,7 @@ interface Props {
 const CourseTitle: React.FC<Props> = ({ courseName }) => {
   return (
     <Box py={2}>
-      {/* Breadcrumbs điều hướng */}
+      
       <Breadcrumbs 
         separator={<NavigateNextIcon fontSize="small" />} 
         aria-label="breadcrumb"
@@ -27,8 +27,8 @@ const CourseTitle: React.FC<Props> = ({ courseName }) => {
         </Typography>
       </Breadcrumbs>
 
-      {/* Tiêu đề chính */}
-      <Typography variant="h5" fontWeight={800} color="primary" sx={{ mt: 3, mb: 1 }}>
+  
+      <Typography variant="h5" fontWeight={700} color="primary" sx={{ mt: 3, mb: 1 }}>
         {courseName.toUpperCase()}
       </Typography>
     </Box>

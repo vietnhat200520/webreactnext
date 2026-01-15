@@ -5,7 +5,7 @@ import { Box, Typography, Tabs, Tab, Paper } from '@mui/material';
 interface Props {
   title: string;
   description: string;
-  points: string[]; // Đây chính là trường Introduction từ card.json
+  points: string[]; 
 }
 
 const CourseIntroduction: React.FC<Props> = ({ title, description, points }) => {
@@ -31,7 +31,7 @@ const CourseIntroduction: React.FC<Props> = ({ title, description, points }) => 
           {description}
         </Typography>
 
-        <Typography variant="subtitle1" fontWeight={800} gutterBottom>
+        <Typography variant="subtitle1" fontWeight={700} gutterBottom>
           {title} có gì?
         </Typography>
 
