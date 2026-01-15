@@ -1,11 +1,11 @@
-/* Chỉnh sửa tổng thể */
+
 .course-detail-view {
     padding: 32px 0;
     background-color: #fcfdfe;
     min-height: 100vh;
 }
 
-/* Standalone (Bài học độc lập) */
+
 .standalone-root {
     background-color: #fff;
     border: 1px solid #e0e6ed;
@@ -22,15 +22,15 @@
     color: #444 !important;
 }
 
-/* Lesson Item (Bài học trong Section) */
+
 .lesson-item-root {
     position: relative;
-    padding-left: 16px !important; /* Reset padding để căn theo timeline */
+    padding-left: 16px !important; 
     min-height: 72px;
     border-top: 1px solid #f0f2f5;
 }
 
-/* Icon nằm bên phải số thứ tự (badge) */
+
 .lesson-icon-wrapper-inner {
     min-width: 35px !important;
     margin-left: 45px; /* Đẩy icon sang phải để né badge và timeline */
@@ -65,7 +65,7 @@
     align-items: center;
     justify-content: center;
     font-size: 11px;
-    font-weight: 800;
+    font-weight: 700;
     z-index: 2;
     border: 3px solid #fff;
 }
@@ -105,7 +105,7 @@
 }
 
 .progress-indicator {
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     color: #555;
     min-width: 30px;
     text-align: right;

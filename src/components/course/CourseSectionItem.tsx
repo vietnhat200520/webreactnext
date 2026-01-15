@@ -12,12 +12,12 @@ interface Props {
 }
 
 const CourseSectionItem: React.FC<Props> = ({ section }) => {
-  // Case 1: Mục độc lập (Không nằm trong section đóng mở)
+ 
   if (section.displayType === 'standalone') {
     return (
-      <div className="standalone-root">
+      <Box className="standalone-root">
         <Box display="flex" alignItems="center">
-          {/* Chỉ hiện icon loại bài học ở đầu, không có icon đóng/mở */}
+          
           <ListItemIcon classes={{ root: "standalone-icon-wrapper" }}>
             {section.type === 'video' ? <PlayCircleIcon /> : <MenuBookIcon />}
           </ListItemIcon>
@@ -34,11 +34,11 @@ const CourseSectionItem: React.FC<Props> = ({ section }) => {
           <Typography className="progress-indicator">{section.progress || '-'}</Typography>
           <LaunchIcon className="launch-icon-style" />
         </Box>
-      </div>
+      </Box>
     );
   }
 
-  // Case 2: Section có chứa danh sách bài học (Có đóng mở)
+  
   return (
     <Accordion 
       classes={{ root: "section-accordion-root" }}
